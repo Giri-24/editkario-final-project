@@ -6,10 +6,32 @@
     <title>Editkaro.in Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+    if (!localStorage.getItem("loggedInUser")) {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
 <center>
 <body>
     <header>
+        <div id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button onclick="loginUser()">Login</button>
+      <p>Don’t have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" style="display:none;">
+      <h2>Create Account</h2>
+      <input type="text" id="signup-username" placeholder="Username" required>
+      <input type="password" id="signup-password" placeholder="Password" required>
+      <button onclick="signupUser()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+  </div>
         <div class="logo">Editkaro.in</div>
         <nav>
             <ul>
