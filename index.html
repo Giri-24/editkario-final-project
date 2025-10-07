@@ -20,7 +20,6 @@
                 <li><a  href="#contact">Contact us</a></li>
             </ul>
         </nav>
-          <button id="login-btn" class="login-btn">Login / Sign Up</button>
     </header>
 
     <section id="home" class="hero" style="background-image: url('background-image.jpg');">
@@ -138,22 +137,7 @@ window.onclick = function(event) {
 }
 
 // Toggle Login / Sign-Up form (just changes text)
-let isLogin = true;
-function toggleForm() {
-    isLogin = !isLogin;
-    document.getElementById("form-title").innerText = isLogin ? "Login" : "Sign Up";
-    document.querySelector(".modal-content button").innerText = isLogin ? "Login" : "Sign Up";
-    document.getElementById("toggle-text").innerHTML = isLogin
-        ? "Don't have an account? <span class='toggle-link' onclick='toggleForm()'>Sign Up</span>"
-        : "Already have an account? <span class='toggle-link' onclick='toggleForm()'>Login</span>";
-}
 
-// Handle login/sign-up (demo only, no check)
-function handleModalLogin() {
-    alert(isLogin ? "Logged in successfully!" : "Signed up successfully!");
-    modal.style.display = "none";
-    loginBtn.style.display = "none"; // hide button after login
-}
 </script>
 
 </body>
