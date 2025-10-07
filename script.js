@@ -47,3 +47,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+function showSignup() {
+  document.getElementById("login-form").style.display = "none";
+  document.getElementById("signup-form").style.display = "block";
+}
+
+function showLogin() {
+  document.getElementById("signup-form").style.display = "none";
+  document.getElementById("login-form").style.display = "block";
+}
+
+// SIGNUP
+function signupUser() {
+  const username = document.getElementById("signup-username").value.trim();
+  const password = document.getElementById("signup-password").value.trim();
+
+  if (!username || !password) {
+    alert("Please fill in all fields!");
+    return;
+  }
+
+  if (localStorage.getItem(username)) {
+    alert("Username already exists!");
+    return;
+  }
+
+  localStorage.setItem(username, password);
+  alert("Signup successful! Please login.");
+  showLogin();
+}
+
+// LOGIN
+function loginUser() {
+  const username = document.getElementById("login-username").value.trim();
+  const password = document.getElementById("login-password").value.trim();
+
+  const storedPass = localStorage.getItem(username);
+
+  if (storedPass && storedPass === password) {
+    localStorage.setItem("loggedInUser", username);
+    alert("Login successful!");
+    window.location.href = "editkar.html"; // ✅ Go to main site
+  } else {
+    alert("Invalid username or password!");
+  }
+}
+
+// LOGOUT
+function logoutUser() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "login.html";
+}
