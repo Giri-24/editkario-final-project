@@ -297,3 +297,44 @@ footer {
         max-width: 90%; 
     }
 }
+/* ===== LOGIN PAGE STYLING ===== */
+body.auth-page {
+  background: #0f1723;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: #18283b;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.auth-container button {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #ff4747;
+}
