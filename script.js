@@ -78,23 +78,4 @@ function signupUser() {
 }
 
 // LOGIN
-function loginUser() {
-  const username = document.getElementById("login-username").value.trim();
-  const password = document.getElementById("login-password").value.trim();
 
-  const storedPass = localStorage.getItem(username);
-
-  if (storedPass && storedPass === password) {
-    localStorage.setItem("loggedInUser", username);
-    alert("Login successful!");
-    window.location.href = "editkar.html"; // ✅ Go to main site
-  } else {
-    alert("Invalid username or password!");
-  }
-}
-
-// LOGOUT
-function logoutUser() {
-  localStorage.removeItem("loggedInUser");
-  window.location.href = "login.html";
-}
