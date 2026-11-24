@@ -2,10 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "export",
-  trailingSlash: true,
+  // Dynamic server mode enabled (SSR, API Routes & Server Actions)
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

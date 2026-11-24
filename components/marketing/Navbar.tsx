@@ -19,8 +19,8 @@ export function Navbar() {
             <span className="font-extrabold text-xl tracking-tight text-white flex items-center gap-1.5">
               EditKaro<span className="text-primary text-2xl leading-none">.</span>
             </span>
-            <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase -mt-1">
-              Creative Agency OS
+            <span className="text-[10px] text-emerald-400 font-semibold tracking-wider uppercase -mt-1 flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Dynamic OS
             </span>
           </div>
         </Link>
@@ -38,18 +38,18 @@ export function Navbar() {
             Capabilities
           </a>
           <a href="#calculator" className="hover:text-white transition-colors">
-            Pricing Calculator
+            Dynamic Scope
           </a>
         </nav>
 
         {/* Quick Portal Switchers */}
         <div className="hidden lg:flex items-center gap-3">
           <Link
-            href="/review/demo"
+            href="/review/proj-101"
             className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-accent-emerald" />
-            Client Review (Demo)
+            Live Review Studio
           </Link>
           <Link
             href="/pipeline"
@@ -108,16 +108,16 @@ export function Navbar() {
           </a>
           <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
             <Link
-              href="/review/demo"
+              href="/review/proj-101"
               className="px-4 py-2 text-xs font-semibold rounded-lg bg-white/5 text-gray-200"
             >
-              Open Client Review Studio
+              Open Live Review Studio
             </Link>
             <Link
               href="/pipeline"
               className="px-4 py-2 text-xs font-semibold rounded-lg bg-white/5 text-gray-200"
             >
-              Open Agency Pipeline
+              Open Live Pipeline
             </Link>
           </div>
         </div>
