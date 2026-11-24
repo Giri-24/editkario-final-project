@@ -1925,6 +1925,7 @@ button {
         padding: 24px;
         gap: 18px;
         text-align: center;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
     }
 
     .nav-links.active {
@@ -1935,9 +1936,59 @@ button {
         display: block;
     }
 
-    .hero-title { font-size: 2.5rem; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hero-title { font-size: 2.6rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
     .video-gallery { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .footer-content { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 540px) {
+    .container { padding: 0 16px; }
+    #navbar { padding: 12px 14px; }
+    .nav-container { padding: 8px 14px; }
+    .logo-text { font-size: 1.15rem; }
+    .logo-badge { display: none; }
+    .btn-ghost { padding: 6px 10px; }
+    .btn-auth { padding: 6px 12px; font-size: 0.75rem; }
+
+    .hero-section { padding: 130px 16px 60px; }
+    .hero-title { font-size: clamp(2rem, 8.5vw, 2.5rem); }
+    .hero-subtitle { font-size: 0.98rem; margin-bottom: 28px; }
+    .hero-actions { flex-direction: column; width: 100%; gap: 12px; margin-bottom: 40px; }
+    .hero-actions .btn { width: 100%; }
+
+    .section { padding: 60px 0; }
+    .section-title { font-size: 2rem; }
+    .section-desc { font-size: 0.9rem; }
+    .section-header { margin-bottom: 36px; }
+
+    .hero-stats { padding: 16px; }
+    .stat-number { font-size: 1.7rem; }
+    .stat-label { font-size: 0.7rem; }
+
+    .categories { width: 100%; border-radius: var(--radius-md); padding: 4px; }
+    .filter-btn { padding: 6px 12px; font-size: 0.78rem; flex-grow: 1; justify-content: center; }
+
+    .calculator-card { border-radius: var(--radius-md); }
+    .calc-controls, .calc-summary { padding: 24px 18px; }
+    .format-options { grid-template-columns: 1fr; gap: 10px; }
+    .total-amount { font-size: 1.8rem; }
+
+    .contact-wrapper { padding: 24px 16px; border-radius: var(--radius-md); }
+
+    .lightbox { padding: 8px; }
+    .lightbox-container { border-radius: var(--radius-md); }
+    .lightbox-header { padding: 12px 16px; }
+    .lightbox-title-wrap h3 { font-size: 0.95rem; }
+    .lightbox-footer { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 16px; }
+    .lightbox-controls-hint { display: none; }
+
+    .admin-modal-container { border-radius: var(--radius-md); }
+    .admin-modal-header { padding: 14px 18px; }
+    .admin-modal-body { padding: 16px; gap: 18px; }
+    .admin-stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .stat-value { font-size: 1.4rem; }
+
+    .auth-modal-container { padding: 28px 18px; border-radius: var(--radius-md); }
 }
