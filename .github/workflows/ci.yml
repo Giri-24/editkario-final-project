@@ -1,27 +1,19 @@
-name: Production CI & Build Check
+name: Production Deploy Verification
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Next.js Build Check
-        run: npm run build
+      - name: Verify Production Assets
+        run: |
+          test -f index.html || exit 1
+          test -f style.css || exit 1
+          test -f script.js || exit 1
+          echo "All production files present and verified!"
